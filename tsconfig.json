@@ -1,0 +1,40 @@
+{
+    "compilerOptions": {
+        "target": "es2020",
+        "module": "commonjs",
+        // 这样就可以对 `this` 上的数据属性进行更严格的推断`
+        "strict": true,
+        "esModuleInterop": true,
+        "jsx": "preserve",
+        "moduleResolution": "node",
+        "allowUnreachableCode": true, // 不报告执行不到的代码错误。
+        "allowUnusedLabels": false,	// 不报告未使用的标签错误
+        "alwaysStrict": true, // 以严格模式解析并为每个源文件生成 "use strict"语句
+        "baseUrl": ".", // 工作根目录
+        "experimentalDecorators": true, // 启用实验性的ES装饰器
+        "sourceMap": true, // 是否生成map文件
+        "noImplicitAny": false, // 是否默认禁用 any
+        "removeComments": true, // 是否移除注释
+        "paths": { // 指定模块的路径，和baseUrl有关联，和webpack中resolve.alias配置一样
+            "@src/*": [ //指定后可以在文件之直接 import * from 'src';
+                "./src/*"
+            ],
+            "@components/*": [
+                "./src/components/*"
+            ]
+        },
+        "outDir": "./dist", // 输出目录
+        "declaration": true, // 是否自动创建类型声明文件
+        "declarationDir": "./lib", // 类型声明文件的输出目录
+        "allowJs": true, // 允许编译javascript文件。
+        "lib": [ // 编译过程中需要引入的库文件的列表
+            "es5",
+            "es2015",
+            "es2016",
+            "es2017",
+            "es2018",
+            "dom"
+        ]
+    },
+    "include": ["src/**/*", "typings/**/*", "example/**/*"]
+}
