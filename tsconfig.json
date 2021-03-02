@@ -21,6 +21,9 @@
             ],
             "@components/*": [
                 "./src/components/*"
+            ],
+            "@style/*": [
+                "./src/style/*"
             ]
         },
         "outDir": "./dist", // 输出目录

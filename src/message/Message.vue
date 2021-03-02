@@ -1,6 +1,8 @@
 <template>
     <transition name="skk-message__fade">
-        <div v-show="visible" class="skk-message__box" :style="style">{{content}}</div>
+        <div v-show="visible" :style="style" class="skk-message__box"
+             :class="[!type ? '' : `skk-message__${type}`]"
+        >{{content}}</div>
     </transition>
 </template>
 
@@ -9,6 +11,10 @@
     export default defineComponent({
         name: 'Message',
         props: {
+            type: {
+                type: String,
+                required: true
+            },
             content: {
                 type: String,
                 required: true
@@ -55,18 +61,46 @@
     })
 </script>
 
-<style scoped>
+<style scoped lang="less">
+    @import "@style/color.less";
+
     .skk-message__box {
         position: fixed;
         left: 20px;
         top: 100px;
 
-        width: 200px;
-        height: 50px;
+        width: 250px;
+        height: 40px;
         border: 1px solid #e0e0e0;
-        line-height: 48px;
+        line-height: 38px;
+        text-align: center;
+        padding: 0 20px;
+        overflow: hidden;
+        word-wrap: break-word;
+        word-break: break-all;
+        border-radius: 4px;
 
         transition: all .5s;
+    }
+    .skk-message__success {
+        color: @color-success;
+        background: @bg-color-success;
+        border: 1px solid @bd-color-success;
+    }
+    .skk-message__warning {
+        color: @color-warning;
+        background: @bg-color-warning;
+        border: 1px solid @bd-color-warning;
+    }
+    .skk-message__info {
+        color: @color-info;
+        background: @bg-color-info;
+        border: 1px solid @bd-color-info;
+    }
+    .skk-message__error {
+        color: @color-error;
+        background: @bg-color-error;
+        border: 1px solid @bd-color-error;
     }
     .skk-message__fade {
 

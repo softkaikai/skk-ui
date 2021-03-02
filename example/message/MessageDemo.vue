@@ -17,7 +17,7 @@
         },
         methods: {
             success() {
-                Message.success('success');
+                Message.success('success aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
             },
             warning() {
                 Message.warning('warning');

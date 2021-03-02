@@ -68,6 +68,25 @@ module.exports = {
                 ]
             },
             {
+                test: /\.less$/i,
+                use: [
+                    {
+                        loader: "style-loader",
+                    },
+                    {
+                        loader: "css-loader",
+                    },
+                    {
+                        loader: "less-loader",
+                        options: {
+                            lessOptions: {
+                                strictMath: true,
+                            },
+                        },
+                    },
+                ],
+            },
+            {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
@@ -94,6 +113,7 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.jsx', '.js', '.vue'],
         alias: {
             "@src":path.resolve(__dirname, "src"),
+            "@style":path.resolve(__dirname, "src/style"),
         },
     },
     plugins: [

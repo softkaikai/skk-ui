@@ -13,7 +13,6 @@ export default {
     "^.+\\.ts$": "ts-jest",
     "^.+\\.vue$": "vue-jest"
   },
-  setupFiles: ['<rootDir>/define-deprecated-global.js'],
   roots: ["<rootDir>/src/"],
   // All imported modules in your tests should be mocked automatically
   // automock: false,
