@@ -32,12 +32,7 @@
                 required: true
             }
         },
-        data() {
-            return {
-                visible: false
-            }
-        },
-        setup(props, context) {
+        setup(props) {
             const style = computed(() => {
                 return {
                     top: props.offsetTop + 'px',
@@ -47,6 +42,11 @@
 
             return {
                 style
+            }
+        },
+        data() {
+            return {
+                visible: false
             }
         },
         mounted() {

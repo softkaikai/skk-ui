@@ -33,8 +33,7 @@ function close(instance: MessageInstance) {
     const instanceIndex = instances.findIndex(i => i.element === instance.element);
     instances.splice(instanceIndex, 1);
     instances.forEach((i, index) => {
-        // @ts-ignore
-        instances[index].vNode.component.props.offsetTop = getOffsetTop(index);
+        (instances[index].vNode.component as any).props.offsetTop = getOffsetTop(index);
     })
 
     render(null, instance.element);
@@ -44,7 +43,7 @@ function close(instance: MessageInstance) {
 }
 
 
-let MessageMap: Message = {};
+const MessageMap: Message = {};
 
 messageTypes.forEach((type: MessageType) => {
     MessageMap[type] = function(message) {
