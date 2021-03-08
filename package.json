@@ -7,6 +7,7 @@
     "test": "jest",
     "build": "webpack --config ./webpack.config.js",
     "lint": "eslint src/**",
+    "lint:fix": "eslint --fix src/**",
     "format": "prettier --debug-check src/**",
     "serve": "webpack serve --config ./webpack.config.js",
     "esm": "cross-env NODE_ENV=production rollup --config rollup.config.js"
