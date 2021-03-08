@@ -65,8 +65,7 @@ export default defineComponent({
 </script>
 
 <style scoped lang="less">
-@import "@style/color.less";
-
+@import "../style/color.less";
 .skk-message__box {
     position: fixed;
     left: 20px;
