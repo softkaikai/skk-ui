@@ -51,7 +51,7 @@ messageTypes.forEach((type: MessageType) => {
     MessageMap[type] = function (message) {
         const options: MessageOptions = {
             content: message,
-            duration: 25000,
+            duration: 2500,
             type,
         };
 
