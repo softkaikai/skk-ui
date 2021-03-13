@@ -1,24 +1,22 @@
 <template>
     <div>
-        123
         <message-demo></message-demo>
+        <menu-demo></menu-demo>
     </div>
 </template>
 
-<script>
-    import { defineComponent } from 'vue';
-    import MessageDemo from './message/MessageDemo.vue';
+<script lang="ts">
+import { defineComponent } from "vue";
+import MessageDemo from "./message/MessageDemo.vue";
+import MenuDemo from "./menu/MenuDemo.vue";
 
-    export default defineComponent({
-        name: 'App',
-        components: {
-            MessageDemo
-        }
-    })
+export default defineComponent({
+    name: "App",
+    components: {
+        MessageDemo,
+        MenuDemo,
+    },
+});
 </script>
 
-<style scoped>
-
-</style>
-
-
+<style scoped></style>

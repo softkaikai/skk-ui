@@ -11,7 +11,7 @@
     </transition>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent, computed } from "vue";
 export default defineComponent({
     name: "Message",
@@ -26,7 +26,7 @@ export default defineComponent({
         },
         offsetTop: {
             type: Number,
-            required: true,
+            default: 100,
         },
         zIndex: {
             type: Number,

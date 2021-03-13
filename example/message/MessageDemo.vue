@@ -7,31 +7,27 @@
     </div>
 </template>
 
-<script>
-    import Message from '@src/message/index'
+<script lang="ts">
+import Message from "@src/message/index";
+import { defineComponent } from "vue";
 
-    export default {
-        name: "MessageDemo",
-        mounted() {
-
+export default defineComponent({
+    name: "MessageDemo",
+    methods: {
+        success() {
+            Message.success && Message.success("success");
         },
-        methods: {
-            success() {
-                Message.success('success aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
-            },
-            warning() {
-                Message.warning('warning');
-            },
-            info() {
-                Message.info('info');
-            },
-            error() {
-                Message.error('error');
-            },
-        }
-    }
+        warning() {
+            // Message.warning && Message.warning("warning");
+        },
+        info() {
+            // Message.info && Message.info("info");
+        },
+        error() {
+            // Message.error && Message.error("error");
+        },
+    },
+});
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
