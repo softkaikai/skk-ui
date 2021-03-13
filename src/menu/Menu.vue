@@ -39,6 +39,7 @@ export default defineComponent({
     props: {
         menus: {
             type: Array as PropType<Menus>,
+            required: true,
             default: () => {
                 return [];
             },
@@ -68,9 +69,6 @@ export default defineComponent({
         return {
             name: "kaikai",
         };
-    },
-    mounted() {
-        console.log("this is menu");
     },
     methods: {
         expand(menu) {
