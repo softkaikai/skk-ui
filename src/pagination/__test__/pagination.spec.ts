@@ -1,6 +1,5 @@
 import { mount } from "@vue/test-utils";
 import Pagination from "../index";
-import { nextTick } from "vue";
 
 describe("Pagination component", () => {
     it("pagination created successfully", () => {
