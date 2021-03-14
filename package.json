@@ -10,7 +10,8 @@
     "lint:fix": "eslint --fix src/**",
     "format": "prettier --debug-check src/**",
     "serve": "webpack serve --config ./webpack.config.js",
-    "esm": "cross-env NODE_ENV=production rollup --config rollup.config.js"
+    "esm": "cross-env NODE_ENV=production rollup --config rollup.config.js",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
