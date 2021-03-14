@@ -26,13 +26,9 @@ export default defineComponent({
             total: 100,
         };
     },
-    mounted() {
-
-    },
     methods: {
         pageChange(newPage) {
             this.pageNo = newPage;
-            console.log('37 newPage', newPage);
         },
     },
 });
