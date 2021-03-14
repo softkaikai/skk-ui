@@ -1,6 +1,11 @@
 <template>
     <div :style="menuStyle" class="menu">
-        <div v-for="menu of menus" :key="menu.value" class="menu__item">
+        <div
+            v-for="menu of menus"
+            :key="menu.value"
+            class="menu__item"
+            @click.stop="clickMenu(menu)"
+        >
             <div class="menu__name">{{ menu.name }}</div>
             <span
                 class="menu__expand"
@@ -21,6 +26,7 @@
                         :key="secondMenu.value"
                         :style="{ paddingLeft: '20px' }"
                         class="menu__item"
+                        @click.stop="clickMenu(secondMenu)"
                     >
                         <div class="menu__name">{{ secondMenu.name }}</div>
                     </div>
@@ -53,6 +59,7 @@ export default defineComponent({
             default: "600px",
         },
     },
+    emits: ["menuActive"],
     setup(props) {
         const menuStyle = computed(() => {
             return {
@@ -67,10 +74,13 @@ export default defineComponent({
     },
     data() {
         return {
-            name: "kaikai",
+            name: "",
         };
     },
     methods: {
+        clickMenu(menu) {
+            this.$emit("menuActive", menu);
+        },
         expand(menu) {
             menu.expand = !menu.expand;
         },

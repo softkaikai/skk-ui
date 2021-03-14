@@ -104,4 +104,27 @@ describe("menu", () => {
             "100px"
         );
     });
+
+    it("menu emit event", () => {
+        const wrapper = mount(Menu, {
+            props: {
+                width: "100px",
+                height: "400px",
+                menus: [
+                    {
+                        name: "菜单1",
+                        value: "1",
+                    },
+                ],
+            },
+        });
+
+        wrapper.find(".menu__item").trigger("click");
+
+        expect(wrapper.emitted("menuActive")).toHaveLength(1);
+        // @ts-ignore
+        expect(wrapper.emitted("menuActive")[0]).toEqual([
+            { name: "菜单1", value: "1" },
+        ]);
+    });
 });
