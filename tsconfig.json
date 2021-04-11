@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "es2020",
-        "module": "commonjs",
+        "module": "es2020",
         // 这样就可以对 `this` 上的数据属性进行更严格的推断`
         "strict": true,
         "esModuleInterop": true,
@@ -39,5 +39,6 @@
             "dom"
         ]
     },
-    "include": ["src/**/*", "typings/**/*", "example/**/*"]
+    "include": ["src/**/*", "typings/**/*", "example/**/*"],
+    "exclude": ["**/__test__"]
 }

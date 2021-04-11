@@ -12,6 +12,8 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import Button from "@src/button/index";
+// import Button from "../../esm/src/button/button";
+// import "../../esm/src/button/button.css";
 export default defineComponent({
     name: "ButtonDemo",
     components: { Button },
