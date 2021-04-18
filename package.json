@@ -1,6 +1,6 @@
 {
   "name": "skk-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "skk-ui",
   "main": "esm/src/index.js",
   "scripts": {
@@ -23,7 +23,9 @@
   "author": "softkaikai",
   "license": "MIT",
   "module": "esm/src/index.js",
-  "files": ["esm"],
+  "files": [
+    "esm"
+  ],
   "bugs": {
     "url": "https://github.com/softkaikai/skk-ui/issues"
   },
