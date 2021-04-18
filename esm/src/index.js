@@ -1,7 +1,7 @@
-import Message from './message/message';
-import Buttom from './button/button';
+import Message from './message/index';
+import Button from './button/index';
 
 export {
     Message,
-    Buttom
+    Button
 }
