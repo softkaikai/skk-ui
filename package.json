@@ -2,7 +2,7 @@
   "name": "skk-ui",
   "version": "1.0.0",
   "description": "skk-ui",
-  "main": "babel.config.js",
+  "main": "esm/src/index.js",
   "scripts": {
     "test": "jest",
     "build": "webpack --config ./webpack.config.js",
@@ -22,6 +22,8 @@
   ],
   "author": "softkaikai",
   "license": "MIT",
+  "module": "esm/src/index.js",
+  "files": ["esm"],
   "bugs": {
     "url": "https://github.com/softkaikai/skk-ui/issues"
   },
@@ -42,6 +44,7 @@
     "@rollup/plugin-babel": "^5.2.2",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.1",
+    "@rollup/plugin-replace": "^2.4.2",
     "@rollup/plugin-typescript": "^8.1.0",
     "@types/jest": "^26.0.20",
     "@typescript-eslint/eslint-plugin": "^4.16.1",

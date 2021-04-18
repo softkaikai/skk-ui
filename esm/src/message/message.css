@@ -1,0 +1,49 @@
+.skk-message__box[data-v-063bb4d3] {
+  position: fixed;
+  left: 20px;
+  top: 100px;
+  width: 250px;
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  line-height: 38px;
+  text-align: center;
+  padding: 0 20px;
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+.skk-message__success[data-v-063bb4d3] {
+  color: #67c23a;
+  background: rgba(103, 194, 58, 0.1);
+  border: 1px solid rgba(103, 194, 58, 0.3);
+}
+.skk-message__warning[data-v-063bb4d3] {
+  color: #e6a23c;
+  background: rgba(230, 162, 60, 0.1);
+  border: 1px solid rgba(230, 162, 60, 0.3);
+}
+.skk-message__info[data-v-063bb4d3] {
+  color: #909399;
+  background: rgba(144, 147, 153, 0.1);
+  border: 1px solid rgba(144, 147, 153, 0.3);
+}
+.skk-message__error[data-v-063bb4d3] {
+  color: #f56c6c;
+  background: rgba(245, 108, 108, 0.1);
+  border: 1px solid rgba(245, 108, 108, 0.3);
+}
+.skk-message__fade-enter-active[data-v-063bb4d3] {
+  transition: all 0.5s;
+}
+.skk-message__fade-leave-active[data-v-063bb4d3] {
+  transition: all 0.5s;
+}
+.skk-message__fade-enter-from[data-v-063bb4d3] {
+  opacity: 0;
+}
+.skk-message__fade-leave-to[data-v-063bb4d3] {
+  opacity: 0;
+  transform: translate(0, -50%);
+}

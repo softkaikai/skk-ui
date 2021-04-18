@@ -1,3 +1,4 @@
+import path from "path";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 // import commonjs from "@rollup/plugin-commonjs";
 // import babel from '@rollup/plugin-babel';
@@ -8,6 +9,9 @@ import styles from "rollup-plugin-styles";
 import css from "rollup-plugin-css-only";
 import less from "rollup-plugin-less";
 import alias from "@rollup/plugin-alias";
+
+// import replace from "@rollup/plugin-replace";
+import replace from "./rollup-replace";
 const extensions = [".ts", ".vue", ".js"];
 
 export default {
@@ -18,7 +22,12 @@ export default {
         sourcemap: false,
     },
     plugins: [
-        alias({ entries: [{ find: "@src", replacement: "./src" }] }),
+        replace({
+            preventAssignment: true,
+            values: {
+                "@src/types": path.resolve(__dirname, "src/types"),
+            },
+        }),
         // A Rollup plugin which locates modules using the Node resolution algorithm, for using third party modules in node_modules
         nodeResolve({
             extensions,
